@@ -5,9 +5,16 @@ using System.Threading.Tasks;
 
 namespace system_abstracting_cell_poo.Models
 {
-    // TODO: Herdar da classe "Smartphone"
-    public class Iphone
+    public class Iphone : Smartphone
     {
-        // TODO: Sobrescrever o método "InstalarAplicativo"
+        public Iphone(string number, string model, string imei, int memory) : base(number, model, imei, memory)
+        {
+
+        }
+
+        public override void InstallApp(string nameApp)
+        {
+            Console.WriteLine($"Aplicativo {nameApp} instalado no iphone!");
+        }
     }
 }

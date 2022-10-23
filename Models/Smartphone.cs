@@ -7,13 +7,22 @@ namespace system_abstracting_cell_poo.Models
 {
     public abstract class Smartphone
     {
-        public string Number { get; set; }
-        // TODO: Implementar as propriedades faltantes de acordo com o diagrama
+        public Smartphone()
+        {
 
-        public Smartphone(string number)
+        }
+
+        public string Number { get; set; }
+        private string Model { get; set; }
+        private string Imei { get; set; }
+        private int Memory { get; set; }
+
+        public Smartphone(string number, string model, string imei, int memory)
         {
             Number = number;
-            // TODO: Passar os parâmetros do construtor para as propriedades
+            Model = model;
+            Imei = imei;
+            Memory = memory;
         }
 
         public void TurnOn()
